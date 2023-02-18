@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--告诉Django的模板引擎将在模板中使用静态文件-->
+{% load staticfiles %} <!-- New line -->
+<html>
+
+	<head> <title>Rango</title> </head>
+
+	<body>
+		<h1>Rango says...</h1>
+		<div>
+			hey there partner! <br />
+			<strong>{{ boldmessage }}</strong><br />
+		</div>
+
+		<div>
+			<a href="/rango/about/">About</a><br />
+			<img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
+		</div>
+	</body>
+
+</html>
